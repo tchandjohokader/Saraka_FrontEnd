@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Menu, Footer } from "../composant/Menu_Foot";
+=======
+import { Menu, Footer } from "../components/Menu_Foot";
+>>>>>>> bbae662877e60b4404fb819f4b3a54ca05fa65ee
 import {VueOng,Vue,Nous,Imageaccueil} from "../components/vue_ong";
 
 function Pageaccueil (){

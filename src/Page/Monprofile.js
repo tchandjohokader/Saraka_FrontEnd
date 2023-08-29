@@ -1,6 +1,6 @@
 import React from "react";
-import { Menu, Footer } from "../composant/Menu_Foot";
-import '../composant/monprofile.css'
+import { Menu, Footer } from "../components/Menu_Foot";
+import '../components/monprofile.css'
 
 
 function Monprofile () {

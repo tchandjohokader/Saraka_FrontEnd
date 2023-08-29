@@ -1,5 +1,5 @@
 import React  from "react";
-import { Seconnecter } from "../composant/connection";
+import { Seconnecter } from "../components/connection";
 
 function Connection(){
         return(

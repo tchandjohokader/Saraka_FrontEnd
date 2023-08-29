@@ -1,6 +1,6 @@
 import React from "react";
-import { Menu, Footer } from "../composant/Menu_Foot";
-import { Recherche, VueOngs } from "../composant/ong"
+import { Menu, Footer } from "../components/Menu_Foot";
+import { Recherche, VueOngs } from "../components/ong"
 
 function Faireundon(){
         return(

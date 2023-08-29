@@ -1,6 +1,6 @@
 import React from "react";
-import { Menu, Footer } from "../composant/Menu_Foot";
-import {Faireundon} from "../composant/ong"
+import { Menu, Footer } from "../components/Menu_Foot";
+import {Faireundon} from "../components/ong"
 
 function Pagededon () {
         return(

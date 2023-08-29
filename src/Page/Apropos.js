@@ -1,6 +1,6 @@
 import React from "react";
-import { Footer, Menu } from "../composant/Menu_Foot";
-import { Nous } from "../composant/vue_ong";
+import { Footer, Menu } from "../components/Menu_Foot";
+import { Nous } from "../components/vue_ong";
 
 
 

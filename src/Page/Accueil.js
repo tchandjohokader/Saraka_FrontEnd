@@ -1,5 +1,5 @@
-import { Menu, Footer } from "../composant/Menu_Foot";
-import {VueOng,Vue,Nous,Imageaccueil} from "../composant/vue_ong";
+import { Menu, Footer } from "../components/Menu_Foot";
+import {VueOng,Vue,Nous,Imageaccueil} from "../components/vue_ong";
 
 function Pageaccueil (){
         return(

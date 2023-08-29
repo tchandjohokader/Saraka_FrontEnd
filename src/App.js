@@ -9,6 +9,8 @@ import Connection from './Page/Connection';
 import Faireundon from './Page/Faireundon';
 import Monprofile from './Page/Monprofile';
 import Pagededon from './Page/Pagededon';
+import  Inscription  from './Page/Inscription';
+
 
 
 const router = createBrowserRouter([
@@ -33,9 +35,13 @@ const router = createBrowserRouter([
     element: <Connection/>,
   },
   {
+    path: "/Inscription",
+    element: <Inscription/>,
+  },
+  {
     path: "/M",
     element: <Pagededon/>,
-  },
+  }
   ]);
 
 

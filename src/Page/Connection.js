@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React  from "react";
+import { Seconnecter } from "../components/connection";
+
+function Connection(){
+        return(
+            <div>
+                <Seconnecter/>
+            </div>
+        )
+}
+
+export default Connection
+=======
 import React from "react";
 import { Link } from "react-router-dom";
 import '../components/connection.css'
@@ -75,3 +89,4 @@ export default function Connection(){
             </div>
       )
   }
+>>>>>>> bbae662877e60b4404fb819f4b3a54ca05fa65ee

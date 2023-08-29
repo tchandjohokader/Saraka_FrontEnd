@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+.moncompte{
+    text-align: center ;
+    margin-top:11%;
+    margin-bottom:14%;
+}
+@media ((max-width: 660px)) {
+    .moncompte{
+        text-align: center ;
+        margin-top:35%;
+        margin-bottom:20%;
+    }
+}

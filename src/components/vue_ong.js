@@ -1,55 +1,46 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './Vue_Ong.css'
 import { list, infodon} from '../Data';
+import { Link } from 'react-router-dom';
 
-class VueOng extends Component{ 
-    state = {
-        hoveredId: null,
-        ong:null
-      };
-    
-      handleMouseEnter = (id) => {
-        this.setState({ hoveredId: id });
-      };
-    
-      handleMouseLeave = () => {
-        this.setState({ hoveredId: null });
-      };
-      ong=(id)=>{
+function VueOng (props){ 
+  const [hoveredId, setHoveredId] = useState(null)
+  const [transition,setTransition]=useState(true)
+     const ong=(id)=>{
         localStorage.setItem('id', id-1)
       }
-    
-    cartes(){
-      const d=this.props.list
-        return list.slice(0, d).map((item) =>(
-            <div key={item.id} className={`carte ${this.state.hoveredId === item.id ? 'cartehover' : 'cartenohover'}`}
-            onMouseEnter={() => this.handleMouseEnter(item.id)}
-            onMouseLeave={this.handleMouseLeave}
-            onClick={()=>this.ong(item.id)}
-            >
-                    <div className='info'>
-                    <img src={item.image} alt="" className='Imageong'/>
-                    <h3 className='Nomong'>{item.nom}</h3>
-                    <p>{item.description}</p>
-                    <div className='Nbrededon'>
-                        <h5>Aider</h5>
-                    </div>
-                    </div>
-            </div>
-        ))
-    }
-    render(){
+      const d=props.list
+      const cartes =()=>{
+         return list.slice(0, d).map((item) =>(
+          <div key={item.id} className={`carte ${hoveredId === item.id ? 'cartehover' : 'cartenohover'}`}
+          onMouseEnter={() =>{setTimeout(() => {
+            setTransition(true)
+          }, 2500);setHoveredId(item.id)}}
+          onMouseLeave={()=>{setHoveredId(null);setTransition(false)}}
+          onClick={()=>ong(item.id)}
+          >
+                  <div className='info'>
+                  <img src={item.image} alt="" className='Imageong'/>
+                  <h3 className='Nomong'>{item.nom}</h3>
+                  <p>{item.description}</p>
+                  <div className='Nbrededon'>
+                    <Link to={`/${hoveredId}`} style={{ animation:hoveredId === item.id ? 'hover 2.5s ' : 'nohover 3s'}} className={transition && hoveredId === item.id? 'aller' : 'venir'}>Aider</Link>
+                  </div>
+                  </div>
+          </div>
+      ))
+      }
         return(
             <div>
               <div className='oudonner'>
               </div>
                 <section className='listeong' >
-                    {this.cartes()}
+                    {cartes()}
                 </section>
             </div>
         )
     }
-}
+
 
 class Vue extends Component{
     render(){
@@ -82,7 +73,7 @@ function Imageaccueil (){
         
         
     return(
-        <section id="hero" className="hero d-flex align-items-center section-bg accue">
+        <section id="hero" className="hero d-flex align-items-center section-bg accue" style={{backgroundColor:'#616161',opacity:'0.9'}}>
         <div className="container">
           <div className="row justify-content-between gy-5">
             <div className="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
@@ -94,11 +85,11 @@ function Imageaccueil (){
               </div>
             </div>
             <div className="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-              <img src="./IMAGE/fond4.png" className="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300"  style={{ transform: 'translateY(20%)' }}/>
+              <img src="./IMAGE/back.jpeg" className="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300"  style={{ transform: 'translateY(20%)',opacity:'0.3' }}/>
             </div>
           </div>
         </div>
       </section>
     )
 }
-export {Vue,VueOng,Nous,Imageaccueil};
+export {Vue,Nous,Imageaccueil,VueOng};

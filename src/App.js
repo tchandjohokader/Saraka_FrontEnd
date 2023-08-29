@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     element: <Inscription/>,
   },
   {
-    path: "/M",
+    path: "/:id",
     element: <Pagededon/>,
   }
   ]);

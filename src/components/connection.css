@@ -1,0 +1,59 @@
+.connection{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 50px 0px 0px;
+    width: 100%;
+    margin-left: 3%;
+    height: 100vh;
+    background-color: white;
+}
+.tous{
+    background-color: #fbf8f6;
+    display: flex;
+}
+.connect form,.connect h6,.connect a{
+    width: 80%;
+    padding: 10px;
+}
+.col-12{
+    margin-top: 10px;
+}
+.connect form input{
+    border-radius: 10px;
+}
+.connect{
+    margin-top: 15%;
+    display: grid;
+    place-items: center; /* Centre horizontalement et verticalement */
+    
+}
+.inscrit{
+    margin-top: 28px;
+    margin-left: 65%;
+}
+.inscrit a,.connect a{
+    color: rgb(99, 98, 98);
+    text-decoration: underline;
+}
+.inscrit a:hover,.connect a :hover {
+    color: rgb(99, 98, 98);
+  }
+.infoconect{
+    width: 40%;
+    padding: 5%;
+    margin-left: 50px;
+    margin-top: 10%;
+}
+@media (max-width: 700px) {
+    .infoconect{
+        display: none;
+    }
+    .connection{
+        width: 100%;
+        margin-left: 0px;
+        border-radius: 0px;
+    }
+    .inscrit{
+        margin-left: 50%;
+    }
+}

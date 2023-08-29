@@ -1,0 +1,49 @@
+import React from 'react';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Pageaccueil from './Page/Accueil';
+import Apropos from './Page/Apropos';
+import Connection from './Page/Connection';
+import Faireundon from './Page/Faireundon';
+import Monprofile from './Page/Monprofile';
+import Pagededon from './Page/Pagededon';
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Pageaccueil/>,
+  },
+  {
+    path: "/A_propos",
+    element: <Apropos/>,
+  },
+  {
+    path: "/Faire_un_don",
+    element: <Faireundon/>,
+  },
+  {
+    path: "/Mon_compte",
+    element: <Monprofile/>,
+  },
+  {
+    path: "/Connection",
+    element: <Connection/>,
+  },
+  {
+    path: "/M",
+    element: <Pagededon/>,
+  },
+  ]);
+
+
+function App () {
+  return (
+    <RouterProvider router={router} />
+  );
+}
+
+export default App;
+

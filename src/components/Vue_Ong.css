@@ -1,0 +1,266 @@
+.Nbrededon{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    justify-content: space-between;
+}
+.carte{
+    width: 350px;
+    height: max-content;
+    margin-left: 8px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 5px 20px 0px rgb(198, 197, 197);
+    
+}
+.cartehover{
+    cursor: pointer;
+    transform: scale(1.01,1.02);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.cartenohover{
+    transform: scale(1,1);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.Imageong{
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 150px;
+    transform: translateY(-10px);
+    object-fit: cover;
+}
+.Nomong{
+    width: 350px;
+    height: 29px;
+    margin-left: 10px;
+}
+
+.info p {
+    margin-left: 10px;
+    
+}
+.listeong{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.oudonner h3{
+    margin-left: 50px;
+    padding: 20px;
+}
+.oudonner{
+    display: flex;
+    justify-content: space-between;
+}
+.Vue{
+    background-color: #0b61c3;
+    padding: 30px;
+    margin-top: 10px;
+}
+.vue1 {
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+
+.apropo{
+    width: 90%;
+    display: flex;
+
+}
+.apropo,.apropo div{
+    top: 2px;
+    padding: 15px; 
+    margin-left: 30px;
+}
+
+.apropo div{
+    width: 35%;
+}
+
+
+/*ong*/
+
+.tousong{
+    margin-left: 90px;
+    max-height: 700px;
+    overflow-y: scroll;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: -10px;
+    width: 90%;
+}
+.tousong div{
+    margin-top: 7px;
+}
+.recherche{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 60px 17px 100px;
+}
+.recherche select,.recherche input{
+    border-radius: 10px;
+}
+.faireundon{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: max-content;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 15%;
+    margin-bottom: 9%;
+}
+.textdon{
+    text-align: center;
+    transform: translateY(-50px);
+    margin-bottom: 10px;
+}
+.choixdudon{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: space-around;
+}
+.choixdudon li{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgb(62, 62, 62);
+}
+.ongchoisi{
+    display: flex;
+}
+.ongchoisi div{
+    padding: 10px;
+}
+.ongchoisi img{
+    padding: 10px;
+    height: 150px;
+}
+.underline-on-hover {
+    text-decoration: none; /* Supprimez le soulignement par défaut */
+    position: relative; /* Nécessaire pour positionner le pseudo-élément */
+    transition: 0.3s; /* Animation de transition douce */
+    cursor: pointer;
+}
+
+.underline-on-hover::after {
+    content: ''; /* Ajoutez un pseudo-élément après le contenu */
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Ajustez la position de soulignement */
+    width: 100%;
+    height: 2px; /* Épaisseur du soulignement */
+    background-color: rgb(196, 196, 196); /* Couleur du soulignement */
+    transform: scaleX(0); /* Commence avec aucune largeur */
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out; /* Animation de transition pour le soulignement */
+}
+
+.underline-on-hover:hover::after {
+    transform: scaleX(1); /* Élargit le soulignement au survol */
+}
+.row{
+    margin-bottom: 10px;
+}
+.btn{
+    margin-left: 40%;
+    margin-bottom: 10px;
+    font-size: medium;
+}
+@media (max-width: 870px) {
+    .apropo img{
+        width: 50%;
+    }
+    .apropo{
+        height: 70%;
+    }
+}
+@media (max-width: 800px) {
+    .apropo img{
+        width: 100%;
+    }
+    .apropo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .apropo div{
+        width: 100%;
+        margin-left: 10px;
+        padding: 5px;
+    }
+    .apropo div h4{
+        text-align: center;
+        text-decoration: underline;
+        transform: translateY(-970%);
+    }
+    .img-fluid{
+        margin-top: -120px;
+    }
+    .info{
+        margin-bottom: 20px;
+    }
+    .cartehover{
+        transform: scale(1,1)
+    }
+}
+@media (max-width: 790px) {
+    .faireundon{
+        margin-left: 25%;
+        margin-right: 10%;
+        width: 65%;
+    }
+}
+@media (max-width: 660px) {
+    .faireundon{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: max-content;
+        border: 0px;
+        margin-top: 25%;
+        margin-bottom: 9%;
+    }
+    .textdon{
+        text-decoration: underline;
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 925px) {
+    .tousong{
+        margin-left: 5%;
+    }
+    .textdon{
+        transform: translateY(-40px);
+    }
+}
+@media (max-width: 861px) {
+    .tousong{
+        margin-left: 3%;
+        width: 90%;
+        padding: 1px;
+    }
+    .recherche{
+        margin-top: 200px;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 50px 17px 20px;
+    }
+    .recherche select,.recherche input{
+        width: 30%;
+    }
+}
+@media (max-width: 454px) {
+    .recherche select,.recherche input{
+        width: 50%;
+        margin-left: 10px;
+    }
+}

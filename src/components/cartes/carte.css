@@ -1,0 +1,44 @@
+.carte{
+    width: 350px;
+    height: max-content;
+    margin-left: 8px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 5px 20px 0px rgb(198, 197, 197);
+    
+}
+.cartehover{
+    cursor: pointer;
+    transform: scale(1.01,1.02);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.cartenohover{
+    transform: scale(1,1);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+/*animation*/
+[class*="invisible"]{
+    opacity: 0;
+    transform: translateX(30px);
+    transform: translateY(10px);
+}
+.visible{
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+    transition: 2s ;
+}
+.invisible1{
+    transition: 1.5s ease-in-out ;
+}
+.invisible2{
+    transition: 1.5s ease-in-out ;
+}
+.info p {
+    margin-left: 10px;
+    
+}
+.info{
+    margin-bottom: 20px;
+}

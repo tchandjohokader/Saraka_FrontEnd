@@ -9,11 +9,10 @@ import Connection from './Page/Connection';
 import Faireundon from './Page/Faireundon';
 import Monprofile from './Page/Monprofile';
 import Pagededon from './Page/Pagededon';
-<<<<<<< HEAD
-=======
+
 import  Inscription  from './Page/Inscription';
 
->>>>>>> bbae662877e60b4404fb819f4b3a54ca05fa65ee
+
 
 
 const router = createBrowserRouter([
@@ -38,11 +37,9 @@ const router = createBrowserRouter([
     element: <Connection/>,
   },
   {
-<<<<<<< HEAD
     path: "/M",
     element: <Pagededon/>,
-  },
-=======
+  },{
     path: "/Inscription",
     element: <Inscription/>,
   },
@@ -50,7 +47,6 @@ const router = createBrowserRouter([
     path: "/:id",
     element: <Pagededon/>,
   }
->>>>>>> bbae662877e60b4404fb819f4b3a54ca05fa65ee
   ]);
 
 

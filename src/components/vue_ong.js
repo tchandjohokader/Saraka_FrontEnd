@@ -1,21 +1,48 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState,useEffect } from 'react';
 import './Vue_Ong.css'
 import { list, infodon} from '../Data';
 import { Link } from 'react-router-dom';
 
 function VueOng (props){ 
-  const [hoveredId, setHoveredId] = useState(null)
-  const [transition,setTransition]=useState(true)
-     const ong=(id)=>{
+      const [hoveredId, setHoveredId] = useState(null)
+      const [transition,setTransition]=useState(true)
+      const [isVisible, setIsVisible] = useState(false);
+      useEffect(() => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                console.log(entry)
+                setIsVisible(true);
+              } else {
+                setIsVisible(false);
+              }
+            });
+          },
+          { threshold: 0.5 } // Exemple de ratio de visibilité (50%)
+        );
+    
+        const target = document.querySelector('.carte'); // Remplacez 'myElement' par l'ID de votre élément
+        observer.observe(target);
+        
+    
+        // Nettoyez l'observateur lorsque le composant est démonté
+        return () => {
+          observer.disconnect();
+        };
+      }, []);
+
+      const ong=(id)=>{
         localStorage.setItem('id', id-1)
       }
       const d=props.list
       const cartes =()=>{
          return list.slice(0, d).map((item) =>(
-          <div key={item.id} className={`carte ${hoveredId === item.id ? 'cartehover' : 'cartenohover'}`}
-          onMouseEnter={() =>{setTimeout(() => {
-            setTransition(true)
-          }, 2500);setHoveredId(item.id)}}
+          <div key={item.id} 
+               className={`carte ${isVisible  ? 'visible' : 'invisible'} ${hoveredId === item.id ? 'cartehover' : 'cartenohover'}`}
+               onMouseEnter={() =>{setTimeout(() => {
+                setTransition(true)
+              }, 2500);setHoveredId(item.id)}}
           onMouseLeave={()=>{setHoveredId(null);setTransition(false)}}
           onClick={()=>ong(item.id)}
           >

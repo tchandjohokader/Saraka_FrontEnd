@@ -22,5 +22,5 @@ const list=[
     {id:'21',nom:'Children of africa',description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos labore ut at excepturi. Esse, vero quibusdam sit numquam laboriosam necessitatibus modi repellat libero perspiciatis rem nobis maiores atque eveniet voluptatum.',image:'./IMAGE/child.png'},
     {id:'22',nom:'ONUCI',description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos labore ut at excepturi. Esse, vero quibusdam sit numquam laboriosam necessitatibus modi repellat libero perspiciatis rem nobis maiores atque eveniet voluptatum.',image: './IMAGE/onuci.png'},
     {id:'23',nom:'Children of africa',description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos labore ut at excepturi. Esse, vero quibusdam sit numquam laboriosam necessitatibus modi repellat libero perspiciatis rem nobis maiores atque eveniet voluptatum.',image:'./IMAGE/child.png'}]
-const infodon = {vue:'100', ong:'200+',don:'10'}
+const infodon = {vue:100, ong:200,don:10}
 export {list,infodon}

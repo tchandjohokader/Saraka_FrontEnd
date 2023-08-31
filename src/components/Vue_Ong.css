@@ -56,9 +56,13 @@
     justify-content: space-between;
 }
 .Vue{
-    background-color: #0b61c3;
+    background-color: #5097ea;
     padding: 30px;
     margin-top: 10px;
+    background-image: url("../../public/IMAGE/bannier\ d\'annonce.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
 }
 .vue1 {
     font-size: 15px;

@@ -200,22 +200,18 @@
 }
 /*animation*/
 
-[class*="invisible"]{
+.invisible{
     opacity: 0;
-    transform: translateX(30px);
     transform: translateY(10px);
 }
 .visible{
-    opacity: 1;
-    transform: translateX(0);
-    transform: translateY(0);
     transition: 1s ;
 }
-.invisible1{
+.visible1{
     transition: 1.5s ease-in-out ;
 }
-.invisible2{
-    transition: 1.5s ease-in-out ;
+.visible2{
+    transition: 2s ease-in-out ;
 }
 @keyframes hover {
 
@@ -318,3 +314,41 @@
         margin-left: 10px;
     }
 }
+
+
+/* IMAGE d'accueil*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.accueil{
+    display: flex;
+    background-color: black;
+    background-image: url('../../public/IMAGE/back.jpeg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-position-y:50%;
+    height: 700px;
+}
+
+.text {
+    width: 40%; 
+    margin: 7% 15%; 
+    padding: 5px; 
+    color: white;
+}
+.text p{
+    margin: 10px;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
+.titre{
+    margin-left: 10px ;
+    font-size: 60px;
+}
+.boutton{
+    width: 30%;
+    margin-left: 5%;
+}
+
+

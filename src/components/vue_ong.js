@@ -2,6 +2,8 @@ import React, {useState,useEffect } from 'react';
 import './Vue_Ong.css'
 import { list, infodon} from '../Data';
 import { Link } from 'react-router-dom';
+import Boutonaction from './boutonaction/boutonaction';
+import { hover } from '@testing-library/user-event/dist/hover';
 
 function VueOng (props){ 
       const [hoveredId, setHoveredId] = useState(null)
@@ -136,7 +138,7 @@ function image (){
         <div className="container">
           <div className="row justify-content-between gy-5">
             <div className="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-              <h2 data-aos="fade-up" style={{marginTop:'15px'}}>Aider</h2>
+              <h2 data-aos="fade-up" style={{marginTop:'15px'}}> Un Don pour un Monde Meilleur </h2>
               <p data-aos="fade-up" data-aos-delay="100">En ce moment précis, quelque part en Côte d'Ivoire, il y a quelqu'un qui a besoin de vous. Votre compassion, votre générosité et votre solidarité peuvent faire une réelle différence dans la vie de ceux qui font face à l'adversité. Imaginez le pouvoir de votre don. Chaque pièce de monnaie, chaque billet, chaque vêtement, chaque produit alimentaire que vous partagerez ouvrira un océan d'opportunités pour ceux qui se battent pour un meilleur avenir. Votre don sera une source de lumière pour les personnes vivant dans l'obscurité de l'incertitude, de la faim ou de la maladie. Nous vous invitons à devenir le héros de quelqu'un aujourd'hui.</p>
               <div className="d-flex" data-aos="fade-up" data-aos-delay="200">
                 <a href="/Faire_un_don" className="btn-book-a-table">Faire un don</a>
@@ -152,11 +154,34 @@ function image (){
     )
 }
 function Imageaccueil() {
+  const [isVisibl, setIsVisibl] = useState(false);
+  const [hover,setHover]=useState(false)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            
+          } else {
+            setIsVisibl(true);
+          }
+        });
+      },
+      { threshold: 1 } 
+    );
+
+    const target = document.querySelector('.accueil'); 
+    observer.observe(target);
+  }, );
   return(
-    <section>
-      <div>
-        <div>
-          ljkhjghfdfcgvjhkbjln,bnvybctvyxtykuljihgu
+    <section >
+      <div className='accueil'>
+        <div className='text' >
+          <h1 className={`titre ${isVisibl  ? 'visible' : 'invisible'} `}>Agissons Ensemble </h1>
+          <p className={`${isVisibl  ? 'visible1' : 'invisible'} `}> Changeons le monde ensemble , en faisant un don aujourd'hui pour un avenir meilleur.</p>
+          <div className={` 'boutton' ${isVisibl  ? 'visible2' : 'invisible'} `} onMouseEnter={()=>{setHover(true);console.log('ee')}} onMouseLeave={()=>{setHover(false);console.log('ee')}}>
+            <Boutonaction />
+          </div>
         </div>
       </div>
     </section>

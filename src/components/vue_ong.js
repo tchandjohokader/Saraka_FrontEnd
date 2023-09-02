@@ -3,7 +3,6 @@ import './Vue_Ong.css'
 import { list, infodon} from '../Data';
 import { Link } from 'react-router-dom';
 import Boutonaction from './boutonaction/boutonaction';
-import { hover } from '@testing-library/user-event/dist/hover';
 
 function VueOng (props){ 
       const [hoveredId, setHoveredId] = useState(null)
@@ -108,84 +107,67 @@ function Vue (){
 
 
   return(
-    <section className='Vue listeong'>
+    <div className='Vue listeong'>
         <div className="vue1"><h3 id='vue'>{isVisible? affichage(infodon.vue,'vue') : '0'}</h3><h2>Visite</h2></div>
         <div className="vue1"><h3 id='ong'>{isVisible? affichage(infodon.ong,'ong') : '0'}</h3><h2>ONG</h2></div>
         <div className="vue1"><h3 id='don'>{isVisible? affichage(infodon.don,'don') : '0'}</h3><h2>Don</h2></div>
-    </section>
+    </div>
 )
 }
 
 function Nous (){
   return(
-    <div className='apropo'>
-      <img src="./IMAGE/fond3.png" alt=""/>
-      <div>
-      <h4>QUI SOMMES-NOUS</h4>
-        <h3>Saraka la plateforme 
-            qui change des vies
-        </h3>
-        <p> SARAKA vise à faciliter le processus des donations aux œuvres caritatives en localisant le donneur puis en recherchant les associations caritatives les plus proches de chez lui afin de leur faire bénéficier de son aide, qu'elle soit matérielle ou financière.</p>
+    <div >
+    <div style={{display:'flex' }}>
+    <div className='mondemeuilleur'>
+        <img  src="./IMAGE/fond6.jpg" className='imgemondemeuilleur'/>
+      </div>
+      <div className='text1' style={{margin:'5% 3%'}}>
+        <h1>Qui sommes-nous</h1>
+        <h2 style={{marginTop:'15px'}}> Saraka la plateforme 
+            qui change des vies </h2>
+        <p >SARAKA vise à faciliter le processus des donations aux œuvres caritatives en localisant le donneur puis en recherchant les associations caritatives les plus proches de chez lui afin de leur faire bénéficier de son aide, qu'elle soit matérielle ou financière.</p>
+        <Boutonaction backgroundColor='#0b61c3' titre='Changer une vie' color='rgb(221, 235, 254)' lien='Faire_un_don'/>
       </div>
     </div>
+  </div>
   )
 }
-function image (){
-        
-        
-    return(
-        <section id="hero" className="hero d-flex align-items-center section-bg accue">
-        <div className="container">
-          <div className="row justify-content-between gy-5">
-            <div className="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-              <h2 data-aos="fade-up" style={{marginTop:'15px'}}> Un Don pour un Monde Meilleur </h2>
-              <p data-aos="fade-up" data-aos-delay="100">En ce moment précis, quelque part en Côte d'Ivoire, il y a quelqu'un qui a besoin de vous. Votre compassion, votre générosité et votre solidarité peuvent faire une réelle différence dans la vie de ceux qui font face à l'adversité. Imaginez le pouvoir de votre don. Chaque pièce de monnaie, chaque billet, chaque vêtement, chaque produit alimentaire que vous partagerez ouvrira un océan d'opportunités pour ceux qui se battent pour un meilleur avenir. Votre don sera une source de lumière pour les personnes vivant dans l'obscurité de l'incertitude, de la faim ou de la maladie. Nous vous invitons à devenir le héros de quelqu'un aujourd'hui.</p>
-              <div className="d-flex" data-aos="fade-up" data-aos-delay="200">
-                <a href="/Faire_un_don" className="btn-book-a-table">Faire un don</a>
-    
-              </div>
-            </div>
-            <div className="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-              <img src="./IMAGE/fond.png" className="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300"  style={{ transform: 'translateY(20%)' }}/>
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-}
-function Imageaccueil() {
-  const [isVisibl, setIsVisibl] = useState(false);
-  const [hover,setHover]=useState(false)
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            
-          } else {
-            setIsVisibl(true);
-          }
-        });
-      },
-      { threshold: 1 } 
-    );
-
-    const target = document.querySelector('.accueil'); 
-    observer.observe(target);
-  }, );
+function Imageaccueil (){    
   return(
-    <section >
-      <div className='accueil'>
-        <div className='text' >
-          <h1 className={`titre ${isVisibl  ? 'visible' : 'invisible'} `}>Agissons Ensemble </h1>
-          <p className={`${isVisibl  ? 'visible1' : 'invisible'} `}> Changeons le monde ensemble , en faisant un don aujourd'hui pour un avenir meilleur.</p>
-          <div className={` 'boutton' ${isVisibl  ? 'visible2' : 'invisible'} `} onMouseEnter={()=>{setHover(true);console.log('ee')}} onMouseLeave={()=>{setHover(false);console.log('ee')}}>
-            <Boutonaction />
+      <div >
+        <div style={{display:'flex' , backgroundColor:'rgb(239, 247, 249)'}}>
+          <div className='text1'>
+            <h2 style={{marginTop:'15px'}}> Un Don pour un Monde Meilleur </h2>
+            <p >En ce moment précis, quelque part en Côte d'Ivoire, il y a quelqu'un qui a besoin de vous. Votre compassion, votre générosité et votre solidarité peuvent faire une réelle différence dans la vie de ceux qui font face à l'adversité. Imaginez le pouvoir de votre don. Chaque pièce de monnaie, chaque billet, chaque vêtement, chaque produit alimentaire que vous partagerez ouvrira un océan d'opportunités pour ceux qui se battent pour un meilleur avenir. Votre don sera une source de lumière pour les personnes vivant dans l'obscurité de l'incertitude, de la faim ou de la maladie. Nous vous invitons à devenir le héros de quelqu'un aujourd'hui.</p>
+            <Boutonaction backgroundColor='transparent' titre='Aider' color='black' lien='Faire_un_don'/>
+          </div>
+          <div className='mondemeuilleur'>
+            <img  src="./IMAGE/fond5.jpg" className='imgemondemeuilleur'/>
           </div>
         </div>
       </div>
-    </section>
+  )
+}
+function Imagedefond() {
+  useEffect(() => {
+    const target = document.querySelectorAll('.invisible1');
+    target.forEach(element => {
+      element.classList.remove('invisible1')
+      element.classList.add('visible')
+    }); 
+  }, );
+  return(
+      <div className='accueil'>
+        <div className='text' >
+          <h1 className={'titre invisible1'} style={{transition: '1s' }}>Agissons Ensemble </h1>
+          <p className={'contenu invisible1'}style={{transition: '1.5s ease-in-out' }}> Changeons le monde ensemble , en faisant un don aujourd'hui pour un avenir meilleur.</p>
+          <div className={' boutton invisible1 '} style={{transition: '2s ease-in-out' }}>
+            <Boutonaction backgroundColor='transparent' lien ='Faire_un_don' titre='Aider' color='rgb(221, 235, 254)'/>
+          </div>
+        </div>
+      </div>
   )
   
 }
-export {Vue,Nous,Imageaccueil,VueOng};
+export {Vue,Nous,Imageaccueil,Imagedefond,VueOng};

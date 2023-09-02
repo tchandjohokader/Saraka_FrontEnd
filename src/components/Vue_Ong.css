@@ -1,3 +1,4 @@
+
 .Nbrededon{
     display: flex;
     margin-top: 20px;
@@ -16,13 +17,13 @@
 }
 .cartehover{
     cursor: pointer;
-    transform: scale(1.01,1.02);
-    transition-duration: 0.5s;
+    transform: scale(1.08,1.08);
+    transition-duration: 2.5s;
     transition-timing-function: ease-in-out;
 }
 .cartenohover{
     transform: scale(1,1);
-    transition-duration: 0.5s;
+    transition-duration: 2.5s;
     transition-timing-function: ease-in-out;
 }
 .Imageong{
@@ -36,6 +37,8 @@
     width: 350px;
     height: 29px;
     margin-left: 10px;
+    color: black;
+    font-family: sans-serif;
 }
 
 .info p {
@@ -58,7 +61,6 @@
 .Vue{
     background-color: #5097ea;
     padding: 30px;
-    margin-top: 10px;
     background-image: url("../../public/IMAGE/bannier\ d\'annonce.png") ;
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,22 +71,6 @@
     text-align: center;
     color: white;
 }
-
-.apropo{
-    width: 90%;
-    display: flex;
-
-}
-.apropo,.apropo div{
-    top: 2px;
-    padding: 15px; 
-    margin-left: 30px;
-}
-
-.apropo div{
-    width: 35%;
-}
-
 
 /*ong*/
 
@@ -200,18 +186,13 @@
 }
 /*animation*/
 
-.invisible{
+[class*=invisible]{
     opacity: 0;
     transform: translateY(10px);
 }
+
 .visible{
-    transition: 1s ;
-}
-.visible1{
-    transition: 1.5s ease-in-out ;
-}
-.visible2{
-    transition: 2s ease-in-out ;
+    transition: 1s ease-in-out ;
 }
 @keyframes hover {
 
@@ -318,6 +299,7 @@
 
 /* IMAGE d'accueil*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
 
 .accueil{
     display: flex;
@@ -333,11 +315,11 @@
 
 .text {
     width: 40%; 
-    margin: 7% 15%; 
+    margin: 10% 15%; 
     padding: 5px; 
     color: white;
 }
-.text p{
+.contenu{
     margin: 10px;
     font-size: 30px;
     font-family: 'Playfair Display', serif;
@@ -347,8 +329,24 @@
     font-size: 60px;
 }
 .boutton{
-    width: 30%;
+    width: 10px;
     margin-left: 5%;
 }
+/*un don pour un monde meuilleur*/
 
-
+.text1{
+    width: 35%; 
+    margin: 5% 10% 2%; 
+    padding: 5px; 
+    color:black;
+    
+}
+.mondemeuilleur{
+    margin: 5%;
+    width: 40%;
+    height: 50%;
+}
+.imgemondemeuilleur{
+    width: 100%;
+    height: auto;
+}

@@ -1,19 +1,11 @@
 .connection{
-    border: 2px solid white;
-    padding: 10px;
-    border-radius: 50px 0px 0px;
-    width: 100%;
-    margin-left: 3%;
-    height: 100vh;
-    background-color: white;
+    width: 60%;
+    margin-top: 70px;
+    height: 10%;
 }
-.tous{
-    background-color: #fbf8f6;
-    display: flex;
-}
-.connect form,.connect h6,.connect a{
+.connect form,.connect h6{
     width: 80%;
-    padding: 10px;
+    padding: 5px;
 }
 .col-12{
     margin-top: 10px;
@@ -24,11 +16,10 @@
 .connect{
     margin-top: 15%;
     display: grid;
-    place-items: center; /* Centre horizontalement et verticalement */
+    place-items: center; 
     
 }
 .inscrit{
-    margin-top: 28px;
     margin-left: 65%;
 }
 .inscrit a,.connect a{
@@ -42,7 +33,7 @@
     width: 40%;
     padding: 5%;
     margin-left: 50px;
-    margin-top: 10%;
+    margin-top: 70px;
 }
 @media (max-width: 700px) {
     .infoconect{

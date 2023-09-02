@@ -1,27 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Barre Verticale en HTML pur</title>
+    <style>
+        .vertical-line {
+            border-left: 2px solid green; /* Largeur de la barre et couleur */
+            height: 100vh;
+             /* Hauteur de la barre (100% de la hauteur de la fenêtre) */
+        }
+    </style>
 </head>
 <body>
-    <section id="hero" className="hero d-flex align-items-center section-bg accue">
-        <div className="container">
-          <div className="row justify-content-between gy-5">
-            <div className="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-              <h2 data-aos="fade-up" style={{marginTop:'15px'}}> Un Don pour un Monde Meilleur </h2>
-              <p data-aos="fade-up" data-aos-delay="100">En ce moment précis, quelque part en Côte d'Ivoire, il y a quelqu'un qui a besoin de vous. Votre compassion, votre générosité et votre solidarité peuvent faire une réelle différence dans la vie de ceux qui font face à l'adversité. Imaginez le pouvoir de votre don. Chaque pièce de monnaie, chaque billet, chaque vêtement, chaque produit alimentaire que vous partagerez ouvrira un océan d'opportunités pour ceux qui se battent pour un meilleur avenir. Votre don sera une source de lumière pour les personnes vivant dans l'obscurité de l'incertitude, de la faim ou de la maladie. Nous vous invitons à devenir le héros de quelqu'un aujourd'hui.</p>
-              <div className="d-flex" data-aos="fade-up" data-aos-delay="200">
-                
-    
-              </div>
-            </div>
-            <div className="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-              <img src="./IMAGE/fond.png" className="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300"  style={{ transform: 'translateY(20%)' }}/>
-            </div>
-          </div>
-        </div>
-      </section>
+    <hr class="vertical-line">
 </body>
 </html>

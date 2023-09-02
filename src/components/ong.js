@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import { VueOng } from "./vue_ong.js"
 import { list } from "../Data.js"
+import VueOng from "./cartes/carte.js";
 
 
 function VueOngs (){

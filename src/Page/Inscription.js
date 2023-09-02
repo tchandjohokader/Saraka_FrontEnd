@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Boutonaction from "../components/boutonaction/boutonaction";
 
     
 export default function Inscription (){
@@ -23,14 +24,13 @@ export default function Inscription (){
         
     }
     return (
-        <div className="tous">
-            <div className="infoconect">
-                <p>Bienvenue sur</p>
-                <h4>SARAKA</h4>
+        <div style={{display: 'flex'}}>
+            <div className="mondemeuilleur">
+                <img src="./IMAGE/Sign up-pana.png"className='imgemondemeuilleur'/>
             </div>
             <div className="connection">
-                <p className="inscrit">Vous avez un compte <Link to ='/Connection'>connectez-vous</Link></p>
                 <div className="connect">
+                    <h3 style={{color:'#0b61c3'}}>Inscrivez-Vous</h3>
                     <form className="row g-3" onSubmit={(e)=>submit(e)}>
                         <div className="col-md-6">
                             <label htmlFor="inputEmail4" className="form-label">Nom</label>
@@ -52,9 +52,10 @@ export default function Inscription (){
                             <label htmlFor="inputAddress2" className="form-label">Confirmer le mot de passe</label>
                             <input type="password" className="form-control" id="inputAddress2" placeholder="xxxxxxxxxxxx" required value={confirmmotdepasse} onChange={(e)=> setConfirmmotdepasse(e.target.value)}/>
                         </div>
-                        <div className="col-12">
-                            <button type="submit" className="btn btn-light">Envoyer</button>
+                        <div className="col-12" style={{marginLeft:'35%',width:'70%'}}>
+                            <Boutonaction backgroundColor='#0b61c3' titre='Creer votre compte' color='rgb(221, 235, 254)' lien='Faire_un_don'/>
                         </div>
+                        <p className="inscrit" style={{width:'44%'}}>Vous avez un compte <Link to ='/Connection'>connectez-vous</Link></p>
                     </form>
                 </div>
             </div>

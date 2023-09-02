@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import '../components/connection.css'
 import { useState } from "react";
 import axios from 'axios';
+import Boutonaction from "../components/boutonaction/boutonaction";
 /*
 // Send a POST request
 axios({
@@ -25,19 +26,17 @@ export default function Connection(){
         setMotdepasse('')
     }
     /*const motdepasseoublier=()=>{
-
+ 
     }*/
 
     return(
-            <div className="tous">
-                <div className="infoconect">
-                  <p>Bienvenue sur</p>
-                  <h4>SARAKA</h4>
+            <div style={{display: 'flex'}} >
+                <div className="mondemeuilleur">
+                    <img src="./IMAGE/5098293.jpg"className='imgemondemeuilleur'/>
                 </div>
                 <div className="connection">
-                    <p className="inscrit">Vous n'avez pas de compte <Link to ='/Inscription'>inscrivez-vous</Link></p>
                     <div className="connect">
-                        <h6>Informations de votre compte</h6>
+                        <h3 style={{color:'#0b61c3'}}>Connectez-Vous</h3>
                         <form  onSubmit={(e)=>verification(e)}>
                             <div className="form-floating mb-3">
                                 <input 
@@ -61,14 +60,11 @@ export default function Connection(){
                                  />
                                 <label htmlFor="floatingPassword">Mot de passe</label>
                             </div>
-                            <div className="col-12">
-                                <button 
-                                    type="submit" 
-                                    className="btn btn-light"
-                                >
-                                    Envoyer</button>
+                            <div className="col-12" style={{marginLeft:'34%',width:'35%'}}>
+                                <Boutonaction  backgroundColor='#0b61c3' titre='Connection' color='rgb(221, 235, 254)' lien='Faire_un_don'/>
                             </div>
                             <Link>Mot de passe oublier?</Link>
+                            <p className="inscrit">Vous n'avez pas de compte <Link to ='/Inscription'>inscrivez-vous</Link></p>
                         </form>
                     </div>
                 </div>

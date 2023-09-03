@@ -177,6 +177,7 @@
 [class*=invisible]{
     opacity: 0;
     transform: translateY(10px);
+    transition: 1s ease-in-out ;
 }
 
 .visible{
@@ -317,6 +318,6 @@
 }
 .boutton{
     width: 10px;
-    margin-left: 5%;
+    margin-left: 0.5%;
 }
 /*un don pour un monde meuilleur*/

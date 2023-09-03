@@ -17,7 +17,7 @@ export default function Carte (props){
           }
         });
       },
-      { threshold: 0.5 } 
+      { threshold: 0.5 }  
     );
 
     const target = document.querySelector('.carte'); 
@@ -38,7 +38,7 @@ export default function Carte (props){
      return list.slice(0, d).map((item) =>(
       <div
         key={item.id} 
-        className={`carte ${isVisible  ? 'visible' : 'invisible'} ${hoveredId === item.id ? 'cartehover' : 'cartenohover'}`}
+        className={`carte ${isVisible  ? 'visible' : 'invisible'}`}
         onMouseEnter={() =>setHoveredId(item.id)}
         onMouseLeave={()=>setHoveredId(null)}
         onClick={()=>ong(item.id)}
@@ -47,10 +47,17 @@ export default function Carte (props){
           <img src={item.image} alt="" className='Imageong'/>
           <h3 className='Nomong'>{item.nom}</h3>
           <p>{item.description}</p>
-          <div className='Nbrededon'>
-            <Boutonaction backgroundColor='#0b61c3' titre='Aider' color='rgb(221, 235, 254)' lien='Faire_un_don'/>
-            <div>Fcfa 1000</div>
-          </div>
+          <div className='Nbrededon '>
+          <Boutonaction backgroundColor='#0b61c3' titre='Aider' color='rgb(221, 235, 254)' lien={`${item.id}`} />
+              <div className={`${hoveredId === item.id ? 'visible' : 'invisible'}`}>
+                <h5 style={{color:'#0b61c3'}} > 1000 cfa</h5>
+                <h6> donate </h6>
+              </div>
+              <div className={`${hoveredId === item.id ? 'visible' : 'invisible'}`}>
+                <h5 style={{color:'#0b61c3'}}> 1000 cfa </h5>
+                <h6> restan </h6>
+              </div>
+            </div>
         </div>
       </div>
   ))

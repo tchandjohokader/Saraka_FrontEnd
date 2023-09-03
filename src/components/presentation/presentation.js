@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './Vue_Ong.css'
-import Boutonaction from './boutonaction/boutonaction';
+import './presentation.css'
+import Boutonaction from '../boutonaction/boutonaction';
 
-export default function Nous () {
+
+export default function Presentation () {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -10,8 +11,6 @@ export default function Nous () {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-          } else {
-            //setIsVisible(false);
           }
         });
       },

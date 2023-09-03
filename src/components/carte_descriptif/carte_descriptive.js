@@ -10,8 +10,6 @@ export default function Cartedescriptive (props){
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-          } else {
-            //setIsVisible(false);
           }
         });
       },

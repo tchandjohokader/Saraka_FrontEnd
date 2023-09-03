@@ -1,8 +1,17 @@
+[class*=invisible]{
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 1s ease-in-out ;
+}
+
+.visible{
+    transition: 1s ease-in-out ;
+}
 .text1{
     width: 35%; 
     margin: 5% 10% 2%; 
     padding: 5px; 
-    color:black; 
+    color:black;
     
 }
 .mondemeuilleur{
@@ -14,13 +23,4 @@
     border-radius: 20px;
     width: 100%;
     height: auto;
-}
-[class*=invisible]{
-    opacity: 0;
-    transform: translateY(10px);
-    transition: 1s ease-in-out ;
-}
-
-.visible{
-    transition: 1s ease-in-out ;
 }

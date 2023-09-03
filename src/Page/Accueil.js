@@ -3,11 +3,10 @@ import Cartedescriptive from "../components/carte_descriptif/carte_descriptive";
 import Carte from "../components/cartes/carte";
 import '../components/cartes/carte.css'
 import { cartedescriptive, infodon } from "../Data";
-
 import { useEffect, useState } from "react";
 import Boutonaction from "../components/boutonaction/boutonaction";
-import Nous from "../components/vue_ong";
-
+import Presentation from "../components/presentation/presentation";
+ 
 export default function Pageaccueil (){
     let cte0=cartedescriptive[0]
     let cte1=cartedescriptive[1]
@@ -35,8 +34,6 @@ export default function Pageaccueil (){
               entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                   setIsVisible(true);
-                } else {
-                  //setIsVisible(false);
                 }
               });
             },
@@ -65,7 +62,7 @@ export default function Pageaccueil (){
                 <div className="vue1"><h3 id='ong'>{isVisible? affichage(infodon.ong,'ong') : '0'}</h3><h2>ONG</h2></div>
                 <div className="vue1"><h3 id='don'>{isVisible? affichage(infodon.don,'don') : '0'}</h3><h2>Don</h2></div>
             </div>
-            <Nous/>
+            <Presentation/>
             <Cartedescriptive titre ={`${cte1.titre}`} text={`${cte1.text}`} infobouton={`${cte1.infobouton}`} image={`${cte1.image}`}/>
             <Footer/>                
         </div>

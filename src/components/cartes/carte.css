@@ -8,14 +8,22 @@
 }
 .cartehover{
     cursor: pointer;
-    transform: scale(1.01,1.02);
-    transition-duration: 0.5s;
+    transform: scale(1.1,1.1);
+    transition-duration: 1.5s;
     transition-timing-function: ease-in-out;
 }
 .cartenohover{
     transform: scale(1,1);
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
+}
+.Nbrededon{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    justify-content: space-between;
 }
 /*animation*/
 [class*="invisible"]{

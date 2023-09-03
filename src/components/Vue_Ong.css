@@ -1,31 +1,4 @@
 
-.Nbrededon{
-    display: flex;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    justify-content: space-between;
-}
-.carte{
-    width: 350px;
-    height: max-content;
-    margin-left: 8px;
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 10px 5px 20px 0px rgb(198, 197, 197);
-    
-}
-.cartehover{
-    cursor: pointer;
-    transform: scale(1.08,1.08);
-    transition-duration: 2.5s;
-    transition-timing-function: ease-in-out;
-}
-.cartenohover{
-    transform: scale(1,1);
-    transition-duration: 2.5s;
-    transition-timing-function: ease-in-out;
-}
 .Imageong{
     border-radius: 20px 20px 0px 0px;
     width: 100%;
@@ -347,21 +320,3 @@
     margin-left: 5%;
 }
 /*un don pour un monde meuilleur*/
-
-.text1{
-    width: 35%; 
-    margin: 5% 10% 2%; 
-    padding: 5px; 
-    color:black;
-    
-}
-.mondemeuilleur{
-    margin: 5%;
-    width: 40%;
-    height: 50%;
-}
-.imgemondemeuilleur{
-    border-radius: 20px;
-    width: 100%;
-    height: auto;
-}

@@ -59,22 +59,6 @@ function Nous (){
   </div>
   )
 }
-function Imageaccueil (){    
-  return(
-      <div className='heros'>
-        <div style={{display:'flex' , backgroundColor:'#f4fafb'}}>
-          <div className='text1'>
-            <h2 style={{marginTop:'15px'}}> Un Don pour un Monde Meilleur </h2>
-            <p style={{fontSize:'1.1em'}}>En ce moment précis, vous pouvez être le héros dont quelqu'un a besoin. Offrez votre compassion, votre générosité, et votre solidarité, et transformez des vies. Votre don, qu'il s'agisse d'une pièce de monnaie, d'un billet, d'un vêtement ou d'un produit alimentaire, peut ouvrir un monde d'opportunités pour ceux qui luttent pour un avenir meilleur. Soyez la lueur d'espoir pour ceux plongés dans l'obscurité de l'incertitude, de la faim et de la maladie. Agissez dès aujourd'hui pour devenir le héros de quelqu'un.</p>
-            <Boutonaction backgroundColor='#0b61c3' titre='Devenez un héros' color='rgb(221, 235, 254)' lien='Faire_un_don'/>
-          </div>
-          <div className='mondemeuilleur'>
-            <img  src="./IMAGE/fond5.jpg" className='imgemondemeuilleur'alt=''/>
-          </div>
-        </div>
-      </div>
-  )
-}
 function Imagedefond() {
   useEffect(() => {
     const target = document.querySelectorAll('.invisible1');
@@ -96,4 +80,4 @@ function Imagedefond() {
   )
   
 }
-export {Vue,Nous,Imageaccueil,Imagedefond};
+export {Vue,Nous,Imagedefond};

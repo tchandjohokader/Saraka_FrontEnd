@@ -1,10 +1,9 @@
 import React, {  useState,useEffect } from 'react';
 import './carte.css'
 import { list} from '../../Data';
-import { Link } from 'react-router-dom';
-export default function VueOng (props){ 
+import Boutonaction from '../boutonaction/boutonaction.js'
+export default function Carte (props){ 
   const [hoveredId, setHoveredId] = useState(null)
-  const [transition,setTransition]=useState(true)
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,22 +36,22 @@ export default function VueOng (props){
   const d=props.list
   const cartes =()=>{
      return list.slice(0, d).map((item) =>(
-      <div key={item.id} 
-           className={`carte ${isVisible  ? 'visible' : 'invisible'} ${hoveredId === item.id ? 'cartehover' : 'cartenohover'}`}
-           onMouseEnter={() =>{setTimeout(() => {
-            setTransition(true)
-          }, 2500);setHoveredId(item.id)}}
-      onMouseLeave={()=>{setHoveredId(null);setTransition(false)}}
-      onClick={()=>ong(item.id)}
+      <div
+        key={item.id} 
+        className={`carte ${isVisible  ? 'visible' : 'invisible'} ${hoveredId === item.id ? 'cartehover' : 'cartenohover'}`}
+        onMouseEnter={() =>setHoveredId(item.id)}
+        onMouseLeave={()=>setHoveredId(null)}
+        onClick={()=>ong(item.id)}
       >
-              <div className='info'>
-              <img src={item.image} alt="" className='Imageong'/>
-              <h3 className='Nomong'>{item.nom}</h3>
-              <p>{item.description}</p>
-              <div className='Nbrededon'>
-                <Link to={`/${hoveredId}`} style={{ animation:hoveredId === item.id ? 'hover 2.5s ' : 'nohover 3s'}} className={transition && hoveredId === item.id? 'aller' : 'venir'}>Aider</Link>
-              </div>
-              </div>
+        <div className='info'>
+          <img src={item.image} alt="" className='Imageong'/>
+          <h3 className='Nomong'>{item.nom}</h3>
+          <p>{item.description}</p>
+          <div className='Nbrededon'>
+            <Boutonaction backgroundColor='#0b61c3' titre='Aider' color='rgb(221, 235, 254)' lien='Faire_un_don'/>
+            <div>Fcfa 1000</div>
+          </div>
+        </div>
       </div>
   ))
   }

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { list } from "../Data.js"
 import VueOng from "./cartes/carte.js";
+import Boutonaction from './boutonaction/boutonaction';
 
 
 function VueOngs (){
@@ -36,27 +37,30 @@ class Faireundon extends Component{
     render(){
         return(
             <div className="faireundon">
-              <h4 className="textdon">Merci pour votre don</h4>
-                <div className="ongchoisi">
-                  <img src={list[localStorage.getItem('id')].image} alt="" />
-                  <div>
-                    <h4>{list[localStorage.getItem('id')].nom}</h4>
-                    <h5>{list[localStorage.getItem('id')].categorie}</h5>
+              <div className="ongchoisi" style={{backgroundColor:'black'}}>
+                <img src={list[localStorage.getItem('id')].image} alt="" style={{opacity:'0.6'}} />
+                <div>
+                  <h1>{list[localStorage.getItem('id')].nom}</h1>
+                  <h3>Merci pour votre généreux don, qui fait une réelle différence dans notre cause</h3>
+                </div>
+              </div>
+              <div className="choixdudon">
+                <div>
+                  <div className="li">
+                  <li className='underline-on-hover' onClick={this.argent}>Argent</li>
+                  <li className='underline-on-hover'onClick={this.materiel}>Materiel</li>
                   </div>
+                  {this.state.click ? <Finance/>: <Materiel/>}
                 </div>
-                <div className="choixdudon">
-                    <li className='underline-on-hover' onClick={this.argent}>Argent</li>
-                    <li className='underline-on-hover'onClick={this.materiel}>Materiel</li>
-                </div>
-                {this.state.click ? <Finance/>: <Materiel/>}
+              </div>
             </div>
         )
     }
 }
 function Materiel (){
     return(
-        <form action="#" method="get">
-  <div className="input-group mb-3">
+        <form action="#" method="get"  className="materiel">
+  <div className="input-group mb-4">
     <label className="input-group-text" htmlFor="inputGroupSelect01">Categorie</label>
     <select className="form-select" id="inputGroupSelect01">
       <option selected>Choisissez</option>
@@ -66,7 +70,7 @@ function Materiel (){
       <option value="3">Autres</option>
     </select>
   </div>
-  <div className="input-group mb-3">
+  <div className="input-group mb-4">
     <label className="input-group-text" htmlFor="inputGroupSelect01">Livraison</label>
     <select className="form-select" id="inputGroupSelect01">
       <option selected>Comment voulez-vous faire le don</option>
@@ -74,7 +78,7 @@ function Materiel (){
       <option value="2">Faire livrai</option>
     </select>
   </div>
-  <div className="row">
+  <div className="row"> 
     <div className="col">
       <input type="text" className="form-control" placeholder="Intituler" aria-label="First name"/>
     </div>
@@ -82,20 +86,26 @@ function Materiel (){
       <input type="text" className="form-control" placeholder="Quantite" aria-label="Last name"/>
     </div>
   </div>
-  <button type="button" className="btn btn-secondary">Valider</button>
+  <div style={{marginLeft:'35%'}}>
+  <Boutonaction backgroundColor='#0b61c3' titre='Valider' color='rgb(221, 235, 254)' lien='#' />
+  </div>
 </form>
     )
 }
 function Finance (){
     return(
         <div>
-    <div className="input-group mb-3">
-        <span className="input-group-text">FCFA</span>
-        <input type="text" className="form-control" aria-label="Amount (to the nearest dollar)"/>
-        <span className="input-group-text">.00</span>
-    </div>
-    <button type="button" className="btn btn-secondary">Valider</button>
-    </div>
+          <form>
+            <div className="input-group mb-3" style={{marginLeft:'40px',marginRight:'10px'}}>
+                <span className="input-group-text">FCFA</span>
+                <input type="text" className="form-control" aria-label="Amount (to the nearest dollar)"/>
+                <span className="input-group-text">.00</span>
+            </div>
+            <div style={{marginLeft:'45%'}}>
+              <Boutonaction backgroundColor='#0b61c3' titre='Valider' color='rgb(221, 235, 254)' lien='#' />
+            </div>
+          </form>
+        </div>
     )
 }
 

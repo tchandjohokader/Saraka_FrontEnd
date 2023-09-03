@@ -3,9 +3,6 @@ import './Vue_Ong.css'
 import { infodon} from '../Data';
 import Boutonaction from './boutonaction/boutonaction';
 
-
-
-
 function Vue (){
   const [isVisible, setIsVisible] = useState(false);
   const affichage = (nombre, id) => {
@@ -31,17 +28,11 @@ function Vue (){
               }
             });
           },
-          { threshold: 0.4 } // Exemple de ratio de visibilité (50%)
+          { threshold: 0.4 }
         );
-    
         const target = document.querySelector('.Vue'); 
         observer.observe(target);
-            
-        // Nettoyez l'observateur lorsque le composant est démonté
       }, );
-
-
-
   return(
     <div className='Vue listeong'>
         <div className="vue1"><h3 id='vue'>{isVisible? affichage(infodon.vue,'vue') : '0'}</h3><h2>Visite</h2></div>
@@ -56,7 +47,7 @@ function Nous (){
     <div className='Nous'>
     <div style={{display:'flex' , backgroundColor:'#f4fafb'}}>
     <div className='mondemeuilleur'>
-        <img  src="./IMAGE/fond6.jpg" className='imgemondemeuilleur'/>
+        <img  src="./IMAGE/fond6.jpg" className='imgemondemeuilleur' alt=''/>
       </div>
       <div className='text1' style={{margin:'5% 3%'}}>
         <h1>Qui sommes-nous</h1>
@@ -78,7 +69,7 @@ function Imageaccueil (){
             <Boutonaction backgroundColor='#0b61c3' titre='Devenez un héros' color='rgb(221, 235, 254)' lien='Faire_un_don'/>
           </div>
           <div className='mondemeuilleur'>
-            <img  src="./IMAGE/fond5.jpg" className='imgemondemeuilleur'/>
+            <img  src="./IMAGE/fond5.jpg" className='imgemondemeuilleur'alt=''/>
           </div>
         </div>
       </div>

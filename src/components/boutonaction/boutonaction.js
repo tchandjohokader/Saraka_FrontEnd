@@ -12,7 +12,7 @@ export default function Boutonaction(props){
             borderRadius: '20px',
             fontFamily:'Inter',
             margin: '10px',
-            padding: '2px 20px',
+            padding: '5px 20px',
             fontSize: '24px',
             textDecoration: 'none',
             transition:'0.5s ease-in-out'

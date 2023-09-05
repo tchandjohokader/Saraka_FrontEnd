@@ -263,39 +263,3 @@
     }
 }
 
-
-/* IMAGE d'accueil*/
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
-.accueil{
-    display: flex;
-    background-color: black;
-    background-image: url('../../public/IMAGE/back.jpeg');
-    background-repeat: no-repeat;
-    opacity: 1;
-    background-blend-mode: luminosity;
-    background-size: cover;
-    background-position-y:50%;
-    height: 700px;
-}
-
-.text {
-    width: 40%; 
-    margin: 10% 15%; 
-    padding: 5px; 
-    color: white;
-}
-.contenu{
-    margin: 10px;
-    font-size: 30px;
-    font-family: 'Playfair Display', serif;
-}
-.titre{
-    margin-left: 10px ;
-    font-size: 60px;
-}
-.boutton{
-    width: 10px;
-    margin-left: 1%;
-}
-/*un don pour un monde meuilleur*/

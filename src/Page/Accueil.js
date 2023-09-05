@@ -1,6 +1,7 @@
 import { Menu, Footer } from "../components/Menu_Foot";
 import Cartedescriptive from "../components/carte_descriptif/carte_descriptive";
 import Carte from "../components/cartes/carte";
+import '../components/accueil.css'
 import '../components/Vue_Ong.css'
 import '../components/cartes/carte.css'
 import { cartedescriptive, infodon } from "../Data";

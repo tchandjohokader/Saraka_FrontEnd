@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Menu extends React.Component {
-    render() {
+function Menu () {
         return (
           <header id="header" className="header fixed-top d-flex align-items-center" >
     <div className="container d-flex align-items-center justify-content-between">
@@ -25,11 +24,8 @@ class Menu extends React.Component {
       <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     </div>
   </header>
-        );
-    }
-}
-class Footer extends Component{
-    render(){
+        )}
+function Footer (){
         return(
             <footer id="footer" className="footer" >
 
@@ -93,6 +89,5 @@ class Footer extends Component{
   </footer>
         )
     }
-}
 export { Menu, Footer };
 

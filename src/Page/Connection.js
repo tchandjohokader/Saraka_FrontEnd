@@ -32,7 +32,7 @@ export default function Connection(){
     return(
             <div style={{display: 'flex'}} >
                 <div className="mondemeuilleur">
-                    <img src="./IMAGE/5098293.jpg"className='imgemondemeuilleur'/>
+                    <img src="./IMAGE/5098293.jpg"className='imgemondemeuilleur' alt=""/>
                 </div>
                 <div className="connection">
                     <div className="connect">

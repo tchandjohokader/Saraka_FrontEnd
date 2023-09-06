@@ -23,14 +23,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.oudonner h3{
-    margin-left: 50px;
-    padding: 20px;
-}
-.oudonner{
-    display: flex;
-    justify-content: space-between;
-}
 .Vue{
     background-color: #5097ea;
     padding: 30px;
@@ -260,6 +252,6 @@
     .recherche select,.recherche input{
         width: 50%;
         margin-left: 10px;
-    }
+    } 
 }
 

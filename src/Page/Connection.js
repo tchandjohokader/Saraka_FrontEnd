@@ -4,7 +4,7 @@ import '../components/connection.css'
 import { useState } from "react";
 import axios from 'axios';
 import Boutonaction from "../components/boutonaction/boutonaction";
-/*
+/* 
 // Send a POST request
 axios({
   method: 'post',
@@ -34,7 +34,7 @@ export default function Connection(){
                 <div className="mondemeuilleur">
                     <img src="./IMAGE/5098293.jpg"className='imgemondemeuilleur' alt=""/>
                 </div>
-                <div className="connection">
+                <div className="connection" >
                     <div className="connect">
                         <h3 style={{color:'#0b61c3'}}>Connectez-Vous</h3>
                         <form  onSubmit={(e)=>verification(e)}>

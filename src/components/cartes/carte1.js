@@ -9,6 +9,7 @@ export default function Barte (props){
     return(
         <div
         key={props.id} 
+        className={'carte'}
         onMouseEnter={() =>setHoveredId(props.id)}
         onMouseLeave={()=>setHoveredId(null)}
         onClick={()=>ong(props.id)}

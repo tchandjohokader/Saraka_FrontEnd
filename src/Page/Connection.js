@@ -22,8 +22,14 @@ export default function Connection(){
     const verification=async (e)=>{
         e.preventDefault();
         axios.post('http://localhost:5000/connection',{email,motdepasse})
-        setEmail('')
-        setMotdepasse('')
+          .then(function (response) {
+            //console.log(response.data);
+            setEmail('')
+            setMotdepasse('')
+          })
+          .catch(function (error) {
+            //console.log(error.response.data);
+          });
     }
     /*const motdepasseoublier=()=>{
  
@@ -60,8 +66,13 @@ export default function Connection(){
                                  />
                                 <label htmlFor="floatingPassword">Mot de passe</label>
                             </div>
-                            <div className="col-12" style={{marginLeft:'34%',width:'35%'}}>
-                                <Boutonaction  backgroundColor='#0b61c3' titre='Connection' color='rgb(221, 235, 254)' lien='Faire_un_don'/>
+                            <div className="col-12" style={{marginLeft:'34%',width:'35%'}} onClick={(e)=>verification(e)}>
+                            <Boutonaction
+                                backgroundColor='#0b61c3'
+                                titre='Connection'
+                                color='rgb(221, 235, 254)'
+                                lien='connection'
+                            />
                             </div>
                             <Link>Mot de passe oublier?</Link>
                             <p className="inscrit">Vous n'avez pas de compte <Link to ='/Inscription'>inscrivez-vous</Link></p>

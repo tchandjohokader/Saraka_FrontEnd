@@ -20,8 +20,17 @@ export default function Inscription (){
             console.log(error)
         });
     }
-    const verification =()=>{
-        
+    const verification=async (e)=>{
+        e.preventDefault();
+        axios.post('http://localhost:5000/connection',{email,motdepasse})
+          .then(function (response) {
+            console.log(response.data);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        setEmail('')
+        setMotdepasse('')
     }
     return (
         <div style={{display: 'flex'}}>

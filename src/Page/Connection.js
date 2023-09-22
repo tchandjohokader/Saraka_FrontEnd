@@ -18,17 +18,21 @@ axios({
 export default function Connection(){
     const [email, setEmail] = useState("");
     const [motdepasse, setMotdepasse] = useState("");
+    const data={
+        email:email,
+        motdepasse:motdepasse
+    }
 
     const verification=async (e)=>{
         e.preventDefault();
-        axios.post('http://localhost:5000/connection',{email,motdepasse})
+        axios.post('http://localhost:5000/connection',data)
           .then(function (response) {
-            //console.log(response.data);
+            console.log(response.data);
             setEmail('')
             setMotdepasse('')
           })
           .catch(function (error) {
-            //console.log(error.response.data);
+            console.log(error.response.data);
           });
     }
     /*const motdepasseoublier=()=>{

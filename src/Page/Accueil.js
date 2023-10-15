@@ -53,7 +53,7 @@ export default function Pageaccueil (){
                     <h1 className={'titre invisible1'} style={{transition: '1s' }}>Agissons Ensemble </h1>
                     <p className={'contenu invisible1'}style={{transition: '1.5s ease-in-out' }}> Changeons le monde ensemble , en faisant un don aujourd'hui pour un avenir meilleur.</p>
                     <div className={' boutton invisible1 '} style={{transition: '2s ease-in-out' }}>
-                        <Boutonaction backgroundColor='transparent' lien ='Faire_un_don' titre='Aider' color='rgb(221, 235, 254)'/>
+                        <Boutonaction backgroundColor='transparent' lien ='Faire_un_don' titre='Aider' color='rgb(103, 103, 103)'/>
                     </div>
                 </div>
             </div>         
